@@ -1,0 +1,43 @@
+<meta charset="UTF-8">
+
+<script>
+
+function pulaLinha() {
+ 
+    document.write("<br>");
+    document.write("<br>");
+}
+
+
+function mostra(frase) {
+
+    document.write(frase);
+    pulaLinha();
+}
+
+mostra("Se você acertar você ganha 5 reais, se perder tem que me mandar 2 reais.")
+mostra("Se roubar paga 15!")
+
+var numeroPensado = Math.round(Math.random() * 5)
+
+var tentativas = 1;
+
+while(tentativas <= 3) {
+
+    var aposta = parseInt(prompt("Digite um número de 1 - 5! (melhor de 3)"));
+
+    if (aposta == numeroPensado) {
+        mostra("Parabéns, você ganhou! o número da sorte foi: " + numeroPensado);
+        break;
+    } else {
+        mostra("Você perdeu! o número era: " + numeroPensado )
+    }
+
+    tentativas++; //usada para gastar as 3 tentativas
+}
+
+
+mostra("FIM")
+
+</script>
+
